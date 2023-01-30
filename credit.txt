@@ -1,0 +1,2 @@
+bu dosyadaki resimlerin bazıları ve listelerin bazıları örnek
+çokluğu olması adına W3schools.com'dan alındı.
