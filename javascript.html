@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="coder" content="Ege">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="favicon" href="js.ico">
+        <title>JavaScript</title>
+    </head>
+
+    <body>
+        <header>JavaScript</header>
+        <nav>
+            <p id="deneme"></p>
+            <script>
+                document.getElementById("deneme").innerHTML = 5 + 3;
+            </script>
+
+            <script>
+                document.write("ege" + " merhaba!");
+            </script>
+            <p style="font-style: oblique; text-align: center;">document.write() kullanılırsa bütün html'i siler, sadece test etmek gibi amaçlarda kullanılmalıdır.</p>
+
+            <script>
+                window.alert("selam, " + "nasılsın?");
+            </script>
+            <p>window sabit olduğundan sadece alert olarak da kullanılabilir. <br>Örnekler:</p>
+
+            <div id="deneme2">
+                <a href="#" onclick="window.alert('Teşekkürler!')" style="color: rgb(0, 0, 0);">Bana Tıkla!</a>
+            </div>
+
+            <div id="deneme3">
+                <a href="#" onclick="console.log('Başarılı!')" style="color: rgb(0, 0, 0);">Console Log'a yazı yazarım</a>
+            </div>
+
+            <div id="deneme4">
+                <a href="#" onclick="window.print()" style="color: rgb(0, 0, 0);">Bu Sayfayı Yazdır</a>
+            </div>
+            
+            <p>
+                <br>
+                <br>
+                <br>
+            </p>
+            <p id="d"></p>
+            <script>
+                let a, b, c;
+                a = 10;
+                b = 5;
+                c = a + b;
+                document.getElementById("d").innerHTML = "c'nin değeri " + c + "!";
+            </script>
+            <p>Function'lar</p>
+            <p id="d1"></p>
+            <p id="d2"></p>
+            <script>
+                let isim; isim = "Ege";
+                function selam() {
+                    document.getElementById("d1").innerHTML = "Merhaba. Giriş Yapıldı:";
+                    document.getElementById("d2").innerHTML = isim;
+                }
+            </script>
+            <div id="dnm1">
+                <a href="#" onclick="selam()" style="color: rgb(0, 0, 0);">Selam Fonksiyonunu Çağır</a>
+            </div>
+            <br> <br> <br> <br> <br> <br>
+            <p id="d3"></p>
+            <script>
+                // let yerine var da kullanılabilir
+                var x, y;
+                x = 10 * 3;
+                y = 5 * x;
+                document.getElementById("d3").innerHTML = y
+            </script>
+
+            <!-- 
+                let ve const daha yeni tarayacılar içinken,
+                var daha eski tarayıcılar içindir.
+
+                const : değişmeyen, kurallı değişkenler
+                let : değişebilecek değişkenler
+                için kullanılır.
+            -->
+
+            <p id="d4"></p>
+            <script>
+                const urun1 = 50;
+                const urun2 = 23;
+                let urun3; // Değeri atanmamış değişken
+                let toplam = urun1 + urun2;
+                document.getElementById("d4").innerHTML = "Toplam " + toplam + " ₺ ediyor."
+            </script>
+
+            <p>Bir durum var... <br>
+            { }'lı değişken olayları:</p>
+            <p id="d5"></p>
+            <script>
+                var degisken = 15;
+                {
+                    // const degisken; olmaz
+                    // let degisken = 10; olmaz
+                    var degisken = 25; //olur
+                }
+                /*
+                 * let varken sadece const veya sadece let
+                 * const varken var, const
+                 */
+                const bil = 5; // bil = 5
+                {
+                    const bil = 3; // bil = 3
+                }
+                // bil = 5
+            </script>
+            <p id="d6"></p>
+            <script>
+                let araba = {type:"Dodge", model:"Challenger", ttype:"RT", owner:"Ege"};
+                araba.color = "Sarı-Siyah";
+                document.getElementById("d6").innerHTML = "Araba: " + araba.type + " " + araba.model + " " + araba.ttype + " " + araba.color + " " + "Sahibi: " + araba.owner;
+            </script>
+            <p id="d7"></p>
+            <p id="d8"></p>
+            <script>
+                function topla(a, b) {
+                    return a + b
+                }
+                document.getElementById("d7").innerHTML = topla(5, 5)
+
+                kedi = {
+                    isim: "Şeker",
+                    yas: "2",
+                    function() {
+                        return this.isim + " " + this.yas + " yaşında."
+                    }
+                };
+                document.getElementById("d8").innerHTML = kedi.function()
+            </script>
+            <h1>event</h1>
+            <div id="evD">
+                <a href="#" onclick="document.getElementById('d9').innerHTML = 'Ta taaa!'">Tıkla bakalım.</a>
+                <p id="d9"></p>
+            </div>
+            <p><br><br><br></p>
+            
+            <p id="d10"></p>
+            <script>
+                // length fonksiyonu
+                let yazi = "Bu bir yazı.";
+                let uzunluk = yazi.length;
+                document.getElementById("d10").innerHTML = yazi + " yazısı " + uzunluk + " karakter uzunluğunda.";
+            </script>
+
+            <script>
+                kelime = new String("Merhaba Dünya!");
+            </script>
+            <div id="dd1">
+                <a href="#" onclick="console.log(kelime)">Konsol'u kontrol et</a>
+            </div>
+
+            <script>
+                k = "Bu bir yazı."
+                ks = k.slice(0,2)
+            </script>
+            <div id="dd2">
+                <a href="#" onclick="alert(k + ' , ' + ks)">Bas</a>
+            </div>
+            <p><br><br><br><br><br></p>
+            <p id="d11"></p>
+            <script>
+                let kk = "ege nasılsın?";
+                {
+                    let kk = kk.replace("ege","EGE"); // EGE nasılsın?
+                    kk = kk.toUpperCase(); // EGE NASILSIN?
+                    kk = kk.toLowerCase(); // ege nasılsın?
+                    let l = "yazı.";
+                    let birlestir = k.concat(" ", l);
+                }
+                function yazdirA(ID) {
+                    let num = "3";
+                    document.getElementById(ID).innerHTML = "Bana " + num.padStart(3, "0") + " derler"
+                }
+                function yazdirB(ID){
+                    let 
+                }
+            </script>
+            <button onclick="yazdirA('d11')" class="button button">Tıklaa!</button>
+        </nav>
+    </body>
+</html>
