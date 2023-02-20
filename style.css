@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(172, 202, 255);
+}
+nav {
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    text-align: center;
+}
+.button {
+    border-radius: 10px;
+}
